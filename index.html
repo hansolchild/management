@@ -600,7 +600,7 @@ function renderAnalysis() {
   </div>
   ${errors.length?`<div class="abox"><b>⚠ 금액 오류 감지</b><br>${errors.join('<br>')}</div>`:'<div class="ibox">✓ 수입·지출 금액 오류 없음</div>'}
   <div class="card">
-    <div class="card-title">비목별 상세 집행률</div>
+    <div class="card-title">상세 집행률</div>
     <div class="tw"><table>
       <thead><tr><th>비목</th><th class="num">예산 (원)</th><th class="num">집행액 (원)</th><th class="num">잔액 (원)</th><th>집행률</th><th>상태</th></tr></thead>
       <tbody>${deptData.map(d=>{const r=d.r,rate=num(r[18]),cls=rCls(rate),bud=num(r[4]),exe=num(r[17]),rem=bud-exe;return`<tr>
